@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse File</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Parse Method</h1>
+    <h2 style="text-align: center;" id="demo"></h2>
+    <script>
+         var myobj = `{
+            "Name": "Haris",
+            "City": "Multan",
+            "Age": 24,
+            "IsMale": true,
+            "Frustration": null,
+            "Subject": ["C#", "C++", "VB", "JavaScript"],
+            "Courses": {
+                "Computer": "IT",
+                "English": "Influent",
+                "Urdu": "Advance",
+                "Fields": ["Programming","Engineering","Coding"]
+            }
+        }`
+        var mydata = JSON.parse(myobj);
+        var name = mydata.Name;
+        var city = mydata.City;
+        var age = mydata.Age;
+        var ismale = mydata.IsMale;
+        var frustration = mydata.frustration;
+        var subject1 = mydata.Subject[0];
+        var subject2 = mydata.Subject[1];
+        var subject3 = mydata.Subject[2];
+        var subject4 = mydata.Subject[3];
+        var courses1 = mydata.Courses["Computer"];
+        var courses2 = mydata.Courses["English"];
+        var courses3 = mydata.Courses["Urdu"];
+        var courses4 = mydata.Courses["Fields"][0];
+        var courses5 = mydata.Courses["Fields"][1];
+        var courses6 = mydata.Courses["Fields"][2];
+        document.getElementById("demo").innerHTML = "Name : " + name + "<br>" + "City : " + city + "<br>" + "Age : " + age + "<br>" + 
+        "Is Male : " + ismale + "<br>" + "Frustration : " + frustration + "<br>" + "Subject : " + subject1 + " " + subject2 + " " 
+        + subject3  + " " + subject4 + "<br>" + "Courses : " + courses1 + " " + courses2 + " " + courses3 +"<br>" + "Fields : " + courses4
+        + " " + courses5 + " " + courses6;
+        
+    </script>
+</body>
+</html>
